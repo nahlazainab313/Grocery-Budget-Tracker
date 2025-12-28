@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monthly Budget Tracker - Manage your income and expenses efficiently with our beautiful web application">
+    <title>Monthly Budget Tracker | Smart Financial Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-wallet"></i>
+                <span>Budget Tracker</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <button class="btn-primary" id="getStartedBtn">
+                <i class="fas fa-rocket"></i> Get Started
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Take Control of Your
+                    <span class="gradient-text">Financial Future</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Track your income, manage expenses, and achieve your savings goals with our intelligent budget tracking system.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-hero-primary" id="startTrackingBtn">
+                        <i class="fas fa-chart-line"></i> Start Tracking
+                    </button>
+                    <button class="btn-hero-secondary" id="learnMoreBtn">
+                        <i class="fas fa-play-circle"></i> Learn More
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">?2M+</div>
+                        <div class="stat-label">Money Saved</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="dashboard-preview">
+                    <div class="preview-card card-floating">
+                        <i class="fas fa-dollar-sign card-icon"></i>
+                        <div class="card-content">
+                            <div class="card-label">Total Income</div>
+                            <div class="card-value">?5,240</div>
+                            <div class="card-change positive">+12.5%</div>
+                        </div>
+                    </div>
+                    <div class="preview-card card-floating" style="animation-delay: 0.2s">
+                        <i class="fas fa-shopping-cart card-icon"></i>
+                        <div class="card-content">
+                            <div class="card-label">Expenses</div>
+                            <div class="card-value">?3,180</div>
+                            <div class="card-change negative">-8.3%</div>
+                        </div>
+                    </div>
+                    <div class="preview-card card-floating" style="animation-delay: 0.4s">
+                        <i class="fas fa-piggy-bank card-icon"></i>
+                        <div class="card-content">
+                            <div class="card-label">Savings</div>
+                            <div class="card-value">?2,060</div>
+                            <div class="card-change positive">+39.3%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need to manage your finances effectively</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="feature-title">Expense Tracking</h3>
+                    <p class="feature-description">Categorize and track all your expenses with detailed breakdowns and insights.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="feature-title">Income Management</h3>
+                    <p class="feature-description">Track multiple income sources including salary, freelance, and investments.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="feature-title">Savings Goals</h3>
+                    <p class="feature-description">Set and achieve your financial goals with smart tracking and reminders.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Visual Analytics</h3>
+                    <p class="feature-description">Beautiful charts and graphs to visualize your financial health.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-export"></i>
+                    </div>
+                    <h3 class="feature-title">Export Data</h3>
+                    <p class="feature-description">Export your budget data to JSON, PDF, or Excel formats.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Secure & Private</h3>
+                    <p class="feature-description">Your financial data is encrypted and stored securely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Your Budget Dashboard</h2>
+                <p class="section-subtitle">Manage your monthly finances in one place</p>
+            </div>
+
+            <!-- User Info -->
+            <div class="user-info-card">
+                <div class="user-details">
+                    <input type="text" id="userName" placeholder="Enter your name" class="input-field">
+                    <input type="text" id="userMonth" placeholder="Month (e.g., December 2024)" class="input-field">
+                </div>
+                <button class="btn-save" id="saveUserBtn">
+                    <i class="fas fa-save"></i> Save Details
+                </button>
+            </div>
+
+            <!-- Budget Overview Cards -->
+            <div class="budget-overview">
+                <div class="overview-card income-card">
+                    <div class="card-header">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Total Income</span>
+                    </div>
+                    <div class="card-amount" id="totalIncome">?0.00</div>
+                    <div class="card-footer">This month</div>
+                </div>
+
+                <div class="overview-card expense-card">
+                    <div class="card-header">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>Total Expenses</span>
+                    </div>
+                    <div class="card-amount" id="totalExpenses">?0.00</div>
+                    <div class="card-footer">This month</div>
+                </div>
+
+                <div class="overview-card balance-card">
+                    <div class="card-header">
+                        <i class="fas fa-wallet"></i>
+                        <span>Balance</span>
+                    </div>
+                    <div class="card-amount" id="balance">?0.00</div>
+                    <div class="card-footer">Remaining</div>
+                </div>
+
+                <div class="overview-card savings-card">
+                    <div class="card-header">
+                        <i class="fas fa-piggy-bank"></i>
+                        <span>Savings</span>
+                    </div>
+                    <div class="card-amount" id="savings">?0.00</div>
+                    <div class="card-footer" id="savingsPercentage">0% of income</div>
+                </div>
+            </div>
+
+            <!-- Income & Expense Forms -->
+            <div class="forms-container">
+                <!-- Income Form -->
+                <div class="form-card">
+                    <h3 class="form-title">
+                        <i class="fas fa-money-bill-wave"></i> Income Details
+                    </h3>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="salary">Salary</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="salary" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="freelance">Freelance</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="freelance" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="investments">Investments</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="investments" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="otherIncome">Other Income</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="otherIncome" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-form" id="saveIncomeBtn">
+                        <i class="fas fa-check"></i> Save Income
+                    </button>
+                </div>
+
+                <!-- Expense Form -->
+                <div class="form-card">
+                    <h3 class="form-title">
+                        <i class="fas fa-receipt"></i> Expense Details
+                    </h3>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="rent">Rent/Mortgage</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="rent" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="groceries">Groceries</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="groceries" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="utilities">Utilities</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="utilities" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="transportation">Transportation</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="transportation" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="entertainment">Entertainment</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="entertainment" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="healthcare">Healthcare</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="healthcare" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="education">Education</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="education" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="shopping">Shopping</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="shopping" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="otherExpenses">Other Expenses</label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">?</span>
+                                <input type="number" id="otherExpenses" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-form" id="saveExpenseBtn">
+                        <i class="fas fa-check"></i> Save Expenses
+                    </button>
+                </div>
+            </div>
+
+            <!-- Savings Goal -->
+            <div class="savings-goal-card">
+                <h3 class="form-title">
+                    <i class="fas fa-target"></i> Savings Goal
+                </h3>
+                <div class="savings-input-group">
+                    <div class="input-wrapper">
+                        <span class="input-prefix">?</span>
+                        <input type="number" id="savingsGoal" placeholder="Set your monthly savings goal" min="0" step="0.01">
+                    </div>
+                    <button class="btn-form" id="saveSavingsGoalBtn">
+                        <i class="fas fa-bullseye"></i> Set Goal
+                    </button>
+                </div>
+                <div class="savings-progress" id="savingsProgress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text" id="progressText">0% of goal achieved</div>
+                </div>
+            </div>
+
+            <!-- Expense Breakdown Chart -->
+            <div class="chart-card">
+                <h3 class="form-title">
+                    <i class="fas fa-chart-pie"></i> Expense Breakdown
+                </h3>
+                <canvas id="expenseChart"></canvas>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-action btn-export" id="exportJSONBtn">
+                    <i class="fas fa-file-export"></i> Export to JSON
+                </button>
+                <button class="btn-action btn-save-data" id="saveBudgetBtn">
+                    <i class="fas fa-save"></i> Save Budget
+                </button>
+                <button class="btn-action btn-reset" id="resetBtn">
+                    <i class="fas fa-redo"></i> Reset All
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About This Project</h2>
+                    <p class="about-description">
+                        The Monthly Budget Tracker is a comprehensive financial management application developed using 
+                        <strong>Object-Oriented Programming</strong> principles in C++. This project demonstrates the 
+                        practical application of key OOP concepts including:
+                    </p>
+                    <ul class="oop-concepts">
+                        <li><i class="fas fa-check-circle"></i> <strong>Inheritance:</strong> User base class extended by Income and Expense classes</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Polymorphism:</strong> Virtual functions for flexible object handling</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Encapsulation:</strong> Protected data members with controlled access</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Templates:</strong> Generic functions for data validation</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Friend Functions:</strong> Special access for budget calculations</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <h4>Technology Stack</h4>
+                        <div class="tech-badges">
+                            <span class="tech-badge">C++</span>
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="code-preview">
+                        <div class="code-header">
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
+                            <span class="code-title">Budget.h</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>class Budget : public Income, public Expense {
+private:
+    double savingsGoal;
+    
+public:
+    double getBalance() const {
+        return getTotalIncome() - getTotalExpenses();
+    }
+    
+    double getSavings() const {
+        double balance = getBalance();
+        return (balance > 0) ? balance : 0;
+    }
+    
+    friend void displayBudgetSummary(const Budget&);
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-wallet"></i>
+                    <span>Budget Tracker</span>
+                </div>
+                <p class="footer-text">
+                    Developed as a C++ OOP Project | © 2024 All Rights Reserved
+                </p>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Success!</span>
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
+
